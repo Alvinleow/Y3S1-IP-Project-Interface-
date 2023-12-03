@@ -1,0 +1,244 @@
+/* Common styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+}
+
+.container {
+  max-width: 800px; /* Adjust based on your design */
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center; /* Center logos inside the container */
+  align-items: center; /* Align logos vertically */
+  margin: 20px; /* Auto margins for horizontal centering */
+}
+
+.logo-container img {
+  height: 100px; /* Adjust height to make logos smaller */
+  width: auto; /* Maintain aspect ratio */
+}
+
+
+.user-icon{
+  display:flex;
+  justify-content: flex-end;
+}
+
+.user-icon img{
+  width: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.main-content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  color: #ffa500; /* Common header color */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #2c3e50; /* Common subtitle color */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Styles for Month Selection Page */
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+
+.month-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+
+.month-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.check-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  display: none;
+}
+
+
+.month-number {
+  color: #666;
+}
+
+/* Styles for Category Selection Page */
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the container */
+}
+
+.category-item {
+  display: flex;
+  align-items: center; /* Align number and button vertically */
+  margin-bottom: 20px; /* Space between each category item */
+}
+
+.button-number {
+  margin-right: 10px; /* Space between number and button */
+  font-weight: bold; /* Make the number bold */
+  font-size: 18px; /* Adjust font size as necessary */
+}
+
+.category-button {
+  border: none;
+  padding: 20px; /* Padding inside the buttons */
+  border-radius: 5px;
+  color: white;
+  font-size: 18px; /* Adjust font size as necessary */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 300px; /* Adjust the width as needed */
+}
+
+.category-button:hover {
+  opacity: 0.8;
+}
+
+.water {
+  background-color: #3498db; /* Blue */
+}
+
+.electricity {
+  background-color: #f1c40f; /* Yellow */
+}
+
+.waste {
+  background-color: #e74c3c; /* Red */
+}
+
+.oil {
+  background-color: #2ecc71; /* Green */
+}
+
+.category-button:not(:last-child) {
+  margin-bottom: 15px; /* Space between buttons */
+}
+
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styling for the upload instructions */
+.upload-instructions {
+  background: #FFFF00; /* Gold background for the instruction area */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the file upload input */
+input[type="file"] {
+  margin: 10px 0;
+}
+
+input[type="text"] {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(100% - 22px);
+}
+
+.submit-button {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;}
+
+  .icon-container {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+  }
+
+  .profile-icon:before,
+  .logout-icon:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+
+  .profile-icon:before {
+    background-image: url('../images/profile_icon.png');
+  }
+
+  .logout-icon:before {
+    background-image: url('../images/logout_icon.png');
+  }
+
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
