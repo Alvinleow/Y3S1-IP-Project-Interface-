@@ -46,7 +46,18 @@
 
 <div class="footer-bar"></div>
 <script>
-  // Add any necessary JavaScript for functionality
+  document.getElementById('uploadForm').onsubmit = function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+    
+    var day = document.getElementById('days');
+    var wasteConsumption = document.getElementById('waste-consumption');
+
+    if (day.value && wasteConsumption.value) {
+      window.location.href = 'Category Selection.html?completed=waste';
+    } else {
+      alert('Please fill in all the criteria before submitting.');
+    }
+  };
 </script>
 
 </body>
