@@ -53,11 +53,11 @@
     event.preventDefault(); // Prevent the form from submitting the traditional way
     
     var fileUpload = document.getElementById('file-upload');
-    var days = document.getElementById("Odays-Consumption");
+    var days = document.getElementById("Odays-consumption");
     var CookingOilConsumption = document.getElementById('oil-consumption');
 
-    if (fileUpload.value && waterConsumption.value&&days) {
-      window.location.href = 'CategorySelection.html?completed=';
+    if (fileUpload.value && CookingOilConsumption.value && days.value) {
+      window.location.href = 'Category Selection.html?completed=oil';
     } else {
       alert('Please fill in all the criteria before submitting.');
     }
