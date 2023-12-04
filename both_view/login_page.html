@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
   }
   .login-wrapper {
     display: flex;
@@ -31,7 +31,8 @@
     font-size: 1.5em;
     color: #333;
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
+    font-weight: bold;
   }
   .login-form input[type="text"],
   .login-form input[type="password"] {
@@ -44,8 +45,8 @@
   }
   .login-form input[type="text"]:focus,
   .login-form input[type="password"]:focus {
+    border-bottom: 2px solid #007AFF;
     outline: none;
-    border-bottom-color: #666;
   }
   .login-form button {
     width: 100%;
@@ -86,16 +87,16 @@
 <body>
 <div class="login-wrapper">
   <header>
-    <img src="../images/MBIP_LOGO.png" alt="MBIP_LOGO" width="700" height="100"> 
+    <img src="../images/MBIP_LOGO.png" alt="MBIP_LOGO"> 
   </header>
   <div class="login-container">
     <div class="login-title">Log In Account</div>
     <form class="login-form">
-      <input type="text" id="username" name="username" placeholder="User Name" required>
+      <input type="text" id="username" name="username" placeholder="Username" required>
       <input type="password" id="password" name="password" placeholder="Password" required>
       <button type="submit">Log In</button>
       <div class="footer">
-        <a href="#">Forgot password?</a> | <a href="#">Register</a>
+        <a href="#">Forgot password?</a> | <a href="../user_view/register_page1.html">Register</a>
       </div>
     </form>
   </div>

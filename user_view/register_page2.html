@@ -41,8 +41,9 @@
     align-items: center;
   }
 
-  .register-form input[type="text"],
-  .register-form input[type="number"] {
+  .register-form input[type="email"],
+  .register-form input[type="tel"],
+  .confirm-code input[type="text"] {
     width: calc(100% - 20px);
     height: 30px;
     padding: 10px;
@@ -51,7 +52,62 @@
     border-radius: 5px;
     font-size: 1em;
   }
-  .register-form button {
+
+  .confirm-code {
+    width: 654px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .code-input {
+    display: flex;
+    flex-direction: column;
+    width: 494px;
+  }
+
+  .confirm-code p {
+    margin-bottom: 0px;
+  }
+
+  .register-form input[type="email"]:focus,
+  .register-form input[type="tel"]:focus,
+  .confirm-code input[type="text"]:focus {
+    border: 1px solid #007AFF;
+    outline: none;
+  }
+
+  .confirm-code input[type="text"],
+  .confirm-code input[type="text"]:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+  }
+
+  .resend-button {
+    height: fit-content;
+  }
+    
+
+  .resend-button button{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: #007AFF;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .resend-icon {
+    max-width: 20%;
+    margin-right: 10px;
+  }
+
+  .submit-button {
     width: 75%;
     padding: 10px;
     border: none;
@@ -62,7 +118,7 @@
     cursor: pointer;
     margin-top: 1.5em;
   }
-  .register-form button:hover {
+  .submit-button:hover {
     background-color: #e65c00;
   }
   .register-form .footer {
@@ -144,18 +200,28 @@
     <div class="register-title">Register account</div>
     <div class="steps-indicator">
       <ul>
+        <li class="completed"></li>
         <li class="active"></li>
-        <li></li>
         <li></li>
       </ul>
     </div>
     
     <form class="register-form">
-        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
-        <input type="text" id="address" name="address" placeholder="Residential Address" required>
-        <input type="number" id="households" name="households" placeholder="Number of Households" required>
-        <input type="text" id="buildingtype" name="buildingtype" placeholder="Type of Building" required>
-        <button type="submit" onclick="location.href='register_page2.html';">Next</button>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" pattern="[0-9]{11}" maxlength="11" required>
+        <div class="confirm-code">
+            <div class="code-input">
+                <p>Confirmation Code</p>
+                <input type="text" id="confirmCode" name="confirmCode" placeholder="  —  —  —  —  " pattern="[0-9]{4}" maxlength="4" required>
+            </div>
+            <div class="resend-button">
+                <button type="button">
+                    <img src="../images/resend.png" alt="Resend" class="resend-icon">
+                    Send Again
+                </button>
+            </div>
+        </div>
+        <button type="submit" class="submit-button" onclick="location.href='register_page3.html';">Next</button>
         <div class="footer">
         Already have an account? <a href="../both_view/login_page.html">Log In</a>
         </div>
