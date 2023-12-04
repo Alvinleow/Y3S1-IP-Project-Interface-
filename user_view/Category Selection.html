@@ -35,19 +35,19 @@
     <div class="category-container">
       <div class="category-item">
         <span class="button-number">1. </span>
-        <button class="category-button water">Water</button>
+        <button class="category-button water" data-category = "water">Water</button>
       </div>
       <div class="category-item">
         <span class="button-number">2. </span>
-        <button class="category-button electricity">Electricity</button>
+        <button class="category-button electricity" data-category = "electricity">Electricity</button>
       </div>
       <div class="category-item">
         <span class="button-number">3. </span>
-        <button class="category-button waste">Waste</button>
+        <button class="category-button waste" data-category = "waste">Waste</button>
       </div>
       <div class="category-item">
         <span class="button-number">4. </span>
-        <button class="category-button oil">Recycling cooking oil</button>
+        <button class="category-button oil" data-category = "oil">Recycling cooking oil</button>
       </div>
     </div>
   </div>
@@ -83,6 +83,28 @@
         completedButton.parentNode.appendChild(tick);
       }
     }
+  });
+
+  const categoryButtons = document.querySelectorAll('.category-button');
+  
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const category = this.getAttribute('data-category');
+      switch(category) {
+        case 'water':
+          window.location.href = 'Upload-Water-Bill.html';
+          break;
+        case 'electricity':
+          window.location.href = 'Upload-Electricity-Bill.html';
+          break;
+        case 'waste':
+          window.location.href = 'Upload-Waste-Bill.html';
+          break;
+        case 'oil':
+          window.location.href = 'Upload-Cooking-Oil-Recycling.html';
+          break;
+      }
+    });
   });
 </script>
 </body>
