@@ -4,106 +4,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Upload Data for Carbon Emission Calculation</title>
-<link rel="stylesheet" href="CSS/styles.css">
+<link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
 
-<main class="content">
-  <header class="header">
-    <div class="logo-container">
-      <img src="images/logo-1.jpg" alt="Logo 1" class="logo">
+<div class="main-content">
+  <div class="CSelection-container">
+    <div class="top">
+      <div class="logo-container">
+        <img src="../images/MBIP_LOGO.png" alt="MBIP Logo" class="logo">
+      </div>
+      <div class="icon-container">
+        <img src="../images/user_icon.png" alt="user_icon" width="70" height="70" id="userIcon" class="dropdown-toggle">
+        <div class="dropdown-menu" aria-labelledby="userIcon">
+            <a class="dropdown-item" href="/path-to-profile">
+                <i class="profile-icon"></i> Profile
+            </a>
+            <a class="dropdown-item" href="/path-to-logout">
+                <i class="logout-icon"></i> Logout
+            </a>
+        </div>
+      </div>
     </div>
-  </header>
-
-  <div class="upload-container">
-    <h1>Upload Data</h1>
-    <h2>Select month to insert data for carbon emission calculation</h2>
+    <h2 class="title">
+      <span class="title-background">Upload Data</span>
+    </h2>
+    
+    <p class="description">Select month to insert data for carbon emission calculation</p>
+    
     <div class="month-grid">
-      <!-- Repeat this structure for each month -->
       <div class="month-item">
-        <button class="month-button">January</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">1</span>
+        <button class="month-button" id="January">January</button>
+        <span class= "month-number">1</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">February</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">2</span>
+        <button class="month-button" id="February">February</button>
+        <span class= "month-number">2</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">March</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">3</span>
+        <button class="month-button" id="March">March</button>
+        <span class= "month-number">3</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">April</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">4</span>
+        <button class="month-button" id="April">April</button>
+        <span class= "month-number">4</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">May</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">5</span>
+        <button class="month-button" id="May">May</button>
+        <span class= "month-number">5</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">June</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">6</span>
+        <button class="month-button" id="June">June</button>
+        <span class= "month-number">6</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">July</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">7</span>
+        <button class="month-button" id="July">July</button>
+        <span class= "month-number">7</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">August</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">8</span>
+        <button class="month-button" id="January">August</button>
+        <span class= "month-number">8</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">September</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">9</span>
+        <button class="month-button" id="September">September</button>
+        <span class= "month-number">9</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">October</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">10</span>
+        <button class="month-button" id="October">October</button>
+        <span class= "month-number">10</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">November</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">11</span>
+        <button class="month-button" id="November">November</button>
+        <span class= "month-number">11</span>
       </div>
-
       <div class="month-item">
-        <button class="month-button">December</button>
-        <img src="images/check-icon.png" alt="Completed" class="check-icon">
-        <span class="month-number">12</span>
+        <button class="month-button" id="December">December</button>
+        <span class= "month-number">12</span>
       </div>
     </div>
   </div>
-</main>
+</div>
+
+<div class="footer-bar"></div>
 
 <script>
-  // Pure JavaScript
   document.addEventListener('DOMContentLoaded', function() {
     var userIcon = document.getElementById("userIcon");
     var dropdownMenu = document.querySelector(".dropdown-menu");
 
     userIcon.addEventListener("click", function(event) {
       dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-      event.stopPropagation(); // Prevent the click from being detected by the window event
+      event.stopPropagation();
     });
 
     window.addEventListener("click", function() {
@@ -112,21 +103,6 @@
       }
     });
   });
-</script>
-
-<div class="icon-container">
-          <img src="/images/user_icon.png" alt="user_icon" width="70" height="70" id="userIcon" class="dropdown-toggle">
-          <div class="dropdown-menu" aria-labelledby="userIcon">
-              <a class="dropdown-item" href="/path-to-profile">
-                  <i class="profile-icon"></i> Profile
-              </a>
-              <a class="dropdown-item" href="/path-to-logout">
-                  <i class="logout-icon"></i> Logout
-              </a>
-          </div>
-</div>
-
-<script>
   document.querySelectorAll('.month-button').forEach(button => {
     button.addEventListener('click', function() {
       window.location.href = 'Category Selection.html?month=' + this.id;
@@ -136,5 +112,3 @@
 
 </body>
 </html>
-
-
