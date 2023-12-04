@@ -9,7 +9,7 @@
 
 <body>
 <div class="main-content">
-  <div class="CSelection-container">
+  <div class="contain-container">
     <div class="top">
       <div class="logo-container">
         <img src="../images/MBIP_LOGO.png" alt="MBIP Logo" class="logo">
@@ -64,6 +64,24 @@
     const selectedMonth = getQueryParam('month');
     if (selectedMonth) {
       document.querySelector('.main-content p').textContent = 'Select consumption category for ' + selectedMonth + ' to insert data for carbon emission calculation';
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const completedCategory = urlParams.get('completed');
+    
+    if (completedCategory) {
+      // Add a green tick to the corresponding category button
+      var completedButton = document.querySelector('.' + completedCategory);
+      if (completedButton) {
+        var tick = document.createElement('img');
+        tick.src = '../images/check-icon.png'; // Path to your green tick image
+        tick.alt = 'Completed';
+        tick.classList.add('check-icon', 'completed');
+        tick.style.display = 'block'; // Make sure to display the tick if it's set to none
+        completedButton.parentNode.appendChild(tick);
+      }
     }
   });
 </script>

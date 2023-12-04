@@ -6,6 +6,7 @@ body, html {
   font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
   height: 100vh;
+  width: 100%;
 }
 
 .description{
@@ -15,6 +16,16 @@ body, html {
   color: #333;
   margin-bottom: 20px;
   text-align: left;
+}
+
+.contain-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+  margin-left: 300px;
+  width: 100%;
+  text-align: center;
 }
 
 .header {
@@ -45,8 +56,8 @@ body, html {
 
 .top {
   display: flex;
-  justify-content: space-between; /* This will place the logo and icon on opposite ends */
-  align-items: center; /* This will vertically align them in the center */
+  justify-content: space-between;
+  align-items: center;
   padding: 0 20px;
   padding-bottom: 20px;
 }
@@ -112,17 +123,10 @@ body, html {
   flex-grow: 1;
   padding: 20px;
   overflow-y: auto;
+  width: 100%;
 }
 
 /* Category Selection */
-.CSelection-container {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
-  margin-left: 300px;
-}
-
 .category-container {
   display: flex;
   flex-direction: column;
@@ -154,6 +158,13 @@ body, html {
   opacity: 0.8;
 }
 
+.check-icon.completed {
+  position: absolute;
+  bottom: 5px; /* Adjust as needed */
+  left: 5px; /* Adjust as needed */
+  width: 20px; /* Size of the green tick icon */
+  display: block; /* Override any 'none' display */
+}
 
 /* Choose Month */
 .month-grid {
@@ -190,6 +201,45 @@ body, html {
 
 .month-number {
   color: #666;
+}
+
+
+/* Upload All Types of Bill */
+.upload-instructions {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+  margin: auto;
+  max-width: 800px; /* Adjust to your preference */
+  text-align: center; /* Center the text inside the container */
+}
+
+input[type="file"],
+input[type="text"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px); /* Adjust width as necessary, accounting for padding and border */
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.UBill-title{
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Footer styles */
