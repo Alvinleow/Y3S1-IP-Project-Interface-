@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Upload Water Bill</title>
 <link rel="stylesheet" href="../CSS/styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+      $("#sidebarUser").load("sidebarUser.html"); 
+    });
+</script>
 </head>
 <body>
-  <div id="sidebar"></div>
+  <div id="sidebarUser"></div>
   <div class="top">
     <div class="logo-container">
         <img src="../images/MBIP_LOGO.png" alt="MBIP_LOGO" >
@@ -51,14 +57,14 @@
 <div class="footer-bar"></div>
 <script>
   document.getElementById('uploadForm').onsubmit = function(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+    event.preventDefault();
     
     var fileUpload = document.getElementById('file-upload');
     var days = document.getElementById("Odays-consumption");
     var CookingOilConsumption = document.getElementById('oil-consumption');
 
     if (fileUpload.value && CookingOilConsumption.value && days.value) {
-      window.location.href = 'Category Selection.html?completed=oil';
+      window.location.href = 'Calculate Result Oil Consumption.html?completed=oil';
     } else {
       alert('Please fill in all the criteria before submitting.');
     }

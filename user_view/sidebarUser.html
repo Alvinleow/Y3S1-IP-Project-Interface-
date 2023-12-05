@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
         }
 
-        #sidebar {
+        #sidebarUser {
             height: 100%;
             width: 250px;
             position: fixed;
@@ -19,7 +19,7 @@
             padding-top: 20px;
         }
 
-        #sidebar a {
+        #sidebarUser a {
             padding: 15px;
             text-decoration: none;
             font-size: 18px;
@@ -29,15 +29,15 @@
             transition: 0.3s;
         }
 
-        #sidebar a:hover {
+        #sidebarUser a:hover {
             background-color:lightgray;
         }
 
-        #sidebar img.logo {
+        #sidebarUser img.logo {
             width: 80%;
             padding: 10px;
         }
-        #sidebar img.icon {
+        #sidebarUser img.icon {
             width: 24px; /* Adjust the width and height based on your icon size */
             height: 24px;
             margin-right: 10px;
@@ -50,12 +50,18 @@
 </head>
 <body>
 
-    <div id="sidebar">
+    <div id="sidebarUser">
         <img src="../images/logo_baru_web.gif" alt="Sidebar Image" class="logo">
-        <a href="#"><img src="../images/home-48.png" alt="Home Icon" class="icon">Home</a>
+        <a href="../both_view/home_page.html"><img src="../images/home-48.png" alt="Home Icon" class="icon">Home</a>
         <a href="#"><img src="../images/dashboard-64.png" alt="Home Icon" class="icon">Dashboard</a>
-        <a href="#"><img src="../images/link-24.png" alt="Home Icon" class="icon">Upload Data</a>
+        <a href="../user_view/Choose Month.html"><img src="../images/link-24.png" alt="Home Icon" class="icon">Upload Data</a>
         <a href="#"><img src="../images/aboutus.png" alt="Home Icon" class="icon">About us</a>
     </div>
+
+    <!-- <div id="content">
+        <h2>Main Content Area</h2>
+        <p>This is the main content area. You can add your website content here.</p>
+    </div> -->
+
 </body>
 </html>

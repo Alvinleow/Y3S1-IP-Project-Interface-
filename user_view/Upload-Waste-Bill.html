@@ -5,8 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Upload Water Bill</title>
 <link rel="stylesheet" href="../CSS/styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+      $("#sidebarUser").load("sidebarUser.html"); 
+    });
+</script>
 </head>
 <body>
+  <div id="sidebarUser"></div>
   <div class="top">
     <div class="logo-container">
         <img src="../images/MBIP_LOGO.png" alt="MBIP_LOGO" >
@@ -53,7 +60,7 @@
     var wasteConsumption = document.getElementById('waste-consumption');
 
     if (day.value && wasteConsumption.value) {
-      window.location.href = 'Category Selection.html?completed=waste';
+      window.location.href = 'Calculate Result Waste.html?completed=waste';
     } else {
       alert('Please fill in all the criteria before submitting.');
     }
