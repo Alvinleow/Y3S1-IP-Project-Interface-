@@ -35,6 +35,10 @@
     background-color: #FFCC16;
     padding: 0.5em 1em; /* Add some padding around the text */
   }
+  .participant-name {
+    /* background-color: #7f7f7d; */
+    padding: 0.5em 1em; /* Add some padding around the text */
+  }
   .participant-detail {
     background: #fff;
     border-radius: 10px;
@@ -139,6 +143,11 @@
   .dropdown-item:hover {
     background-color: #f1f1f1;
   }
+  .validation-dropdown {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
 </style>
 </head>
 <body>
@@ -166,9 +175,7 @@
         <span class="title-background">View Participant</span>
     </h2>
     
-    <!-- <div class="search-box">
-        <input type="text" placeholder="Search...">
-    </div> -->
+    <h3 class="participant-name">Ang Wei Long</h3>
     
     <div class="participant-detail">
         <table>
@@ -184,22 +191,40 @@
             <!-- Repeat this row for each participant -->
             <tr>
             <td>Water</td>
-            <td>Water.pdf</td>
+            <td><a href="path-to/Water.pdf" download="WaterBill">Water.pdf</a></td>
             <td>200</td>
-            <td>Approved</td>
+            <td>
+              <select name="validation" class="validation-dropdown">
+                <option value="Approved">Approved</option>
+                <option value="Not Approved">Not Approved</option>
+                <option value="blank" selected>-</option>
+              </select>
+            </td>
             </tr>
             <!-- Add more rows here -->
             <tr>
             <td>Electric</td>
-            <td>Electric.pdf</td>
+            <td><a href="path-to/Electric.pdf" download="WaterBill">Electric.pdf</a></td>
             <td>200</td>
-            <td>Approved</td>
+            <td>
+              <select name="validation" class="validation-dropdown">
+                <option value="Approved">Approved</option>
+                <option value="Not Approved">Not Approved</option>
+                <option value="blank" selected>-</option>
+              </select>
+            </td>
             </tr>
             <tr>
             <td>Recycle</td>
-            <td>Recycle.pdf</td>
+            <td><a href="path-to/Recycle.pdf" download="WaterBill">Recycle.pdf</a></td>
             <td>200</td>
-            <td>Approved</td>
+            <td>
+              <select name="validation" class="validation-dropdown">
+                <option value="Approved">Approved</option>
+                <option value="Not Approved">Not Approved</option>
+                <option value="blank" selected>-</option>
+              </select>
+            </td>
             </tr>
         </tbody>
         </table>
@@ -223,6 +248,20 @@
         if (dropdownMenu.style.display === "block") {
           dropdownMenu.style.display = "none";
         }
+      });
+    });
+
+    // You might want to add a JavaScript function to handle the change event for the validation dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+      var validationDropdowns = document.querySelectorAll('.validation-dropdown');
+
+      validationDropdowns.forEach(function(dropdown) {
+        dropdown.addEventListener('change', function(event) {
+          // Placeholder for handling the change event
+          // You will need to implement functionality to update the validation status
+          // This might involve sending a request to the server with the new status
+          console.log('Validation status changed for', event.target.name, 'to', event.target.value);
+        });
       });
     });
 </script>
