@@ -15,10 +15,10 @@
     <div class="icon-container">
         <img src="../images/user_icon.png" alt="user_icon" width="70" height="70" id="userIcon" class="dropdown-toggle">
         <div class="dropdown-menu" aria-labelledby="userIcon">
-            <a class="dropdown-item" href="/path-to-profile">
+            <a class="dropdown-item" href="../both_view/user_profile.html">
                 <i class="profile-icon"></i> Profile
             </a>
-            <a class="dropdown-item" href="/path-to-logout">
+            <a class="dropdown-item" href="../both_view/logout_page.html">
                 <i class="logout-icon"></i> Logout
             </a>
         </div>
@@ -107,6 +107,23 @@
       }
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+      var userIcon = document.getElementById("userIcon");
+      var dropdownMenu = document.querySelector(".dropdown-menu");
+    
+      userIcon.addEventListener("click", function(event) {
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        event.stopPropagation(); // Prevent the click from being detected by the window event
+      });
+    
+      window.addEventListener("click", function() {
+        if (dropdownMenu.style.display === "block") {
+          dropdownMenu.style.display = "none";
+        }
+      });
+    });
+
 </script>
 </body>
 </html>
