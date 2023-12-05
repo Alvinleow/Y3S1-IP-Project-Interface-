@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
         }
 
-        #sidebar {
+        #sidebarAdmin {
             height: 100%;
             width: 250px;
             position: fixed;
@@ -19,7 +19,7 @@
             padding-top: 20px;
         }
 
-        #sidebar a {
+        #sidebarAdmin a {
             padding: 15px;
             text-decoration: none;
             font-size: 18px;
@@ -29,15 +29,15 @@
             transition: 0.3s;
         }
 
-        #sidebar a:hover {
+        #sidebarAdmin a:hover {
             background-color:lightgray;
         }
 
-        #sidebar img.logo {
+        #sidebarAdmin img.logo {
             width: 80%;
             padding: 10px;
         }
-        #sidebar img.icon {
+        #sidebarAdmin img.icon {
             width: 24px; /* Adjust the width and height based on your icon size */
             height: 24px;
             margin-right: 10px;
@@ -50,19 +50,19 @@
 </head>
 <body>
 
-    <div id="sidebar">
+    <div id="sidebarAdmin">
         <img src="../images/logo_baru_web.gif" alt="Sidebar Image" class="logo">
-        <a href="#"><img src="../images/home-48.png" alt="Home Icon" class="icon">Home</a>
+        <a href="../both_view/home_page.html"><img src="../images/home-48.png" alt="Home Icon" class="icon">Home</a>
         <a href="#"><img src="../images/calendar-50.png" alt="link-24 Icon" class="icon">Calendar</a>
         <a href="#"><img src="../images/dashboard-64.png" alt="Dashboard Icon" class="icon">Dashboard</a>
-        <a href="#"><img src="../images/report-50.png" alt="link-24 Icon" class="icon">Calculation/Generate Report</a>
-        <a href="#"><img src="../images/person-64.png" alt="aboutus Icon" class="icon">View Participants</a>
+        <a href="../admin_view/calculate_generateReport.html"><img src="../images/report-50.png" alt="link-24 Icon" class="icon">Calculation/Generate Report</a>
+        <a href="../admin_view/view_participant.html"><img src="../images/person-64.png" alt="aboutus Icon" class="icon">View Participants</a>
     </div>
 
-    <div id="content">
+    <!-- <div id="content">
         <h2>Main Content Area</h2>
         <p>This is the main content area. You can add your website content here.</p>
-    </div>
+    </div> -->
 
 </body>
 </html>
