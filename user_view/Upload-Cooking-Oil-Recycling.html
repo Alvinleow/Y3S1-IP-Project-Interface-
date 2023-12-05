@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
+  <div id="sidebar"></div>
   <div class="top">
     <div class="logo-container">
         <img src="../images/MBIP_LOGO.png" alt="MBIP_LOGO" >
@@ -62,6 +63,14 @@
       alert('Please fill in all the criteria before submitting.');
     }
   };
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+      $("#sidebar").load("sidebarUser.html"); 
+    });
 </script>
 
 </body>
