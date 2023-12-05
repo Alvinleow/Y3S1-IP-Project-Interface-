@@ -20,46 +20,30 @@
   header {
     margin-bottom: 30px;
   }
+
   .register-container {
     background: white;
     padding: 2em;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     width: 654px;
-  }
-  .register-title {
-    font-size: 1.5em;
-    color: #333;
-    text-align: left;
-    font-weight: bold;
-    
-  }
-
-  form {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .register-form input[type="text"],
-  .register-form input[type="number"] {
-    width: calc(100% - 20px);
-    height: 30px;
-    padding: 10px;
-    margin-bottom: 1.5em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+  .success-icon {
+    margin-top: 80px;
+    max-width: 30%;
   }
 
-  .register-form input[type="text"]:focus,
-  .register-form input[type="number"]:focus {
-    border: 1px solid #007AFF;
-    outline: none;
+  p {
+    margin-top: 50px;
+    font-weight: bold;
   }
 
-  .register-form button {
-    width: 75%;
+  button {
+    width: 20%;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -69,20 +53,10 @@
     cursor: pointer;
     margin-top: 1.5em;
   }
-  .register-form button:hover {
+  button:hover {
     background-color: #e65c00;
   }
-  .register-form .footer {
-    text-align: center;
-    margin-top: 1em;
-  }
-  .register-form .footer a {
-    color: #ff6600;
-    text-decoration: none;
-  }
-  .register-form .footer a:hover {
-    text-decoration: underline;
-  }
+  
   .footer-bar {
     background-color: rgb(38,123,251);
     width: 100%;
@@ -139,7 +113,6 @@
     display: none;
   }
 
-
 </style>
 </head>
 <body>
@@ -148,25 +121,17 @@
         <img src="../images/MBIP_LOGO.png" alt="MBIP_LOGO"> 
     </header>
     <div class="register-container">
-    <div class="register-title">Register account</div>
     <div class="steps-indicator">
-      <ul>
-        <li class="active"></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
+        <ul>
+          <li class="completed"></li>
+          <li class="completed"></li>
+          <li class="active"></li>
+        </ul>
+      </div>
     
-    <form class="register-form">
-        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
-        <input type="text" id="address" name="address" placeholder="Residential Address" required>
-        <input type="number" id="households" name="households" placeholder="Number of Households" required>
-        <input type="text" id="buildingtype" name="buildingtype" placeholder="Type of Building" required>
-        <button type="submit" onclick="location.href='register_page2.html';">Next</button>
-        <div class="footer">
-        Already have an account? <a href="../both_view/login_page.html">Log In</a>
-        </div>
-    </form>
+    <img src="../images/successful-icon.png" alt="Success" class="success-icon">
+    <p>Your password successfully reset!</p>
+    <button type="submit" onclick="location.href='../both_view/login_page.html';">Login</button>
     </div>
     <div class="footer-bar"></div>
 </div>
