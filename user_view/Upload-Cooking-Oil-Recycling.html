@@ -57,18 +57,26 @@
 <div class="footer-bar"></div>
 <script>
   document.getElementById('uploadForm').onsubmit = function(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+    event.preventDefault();
     
     var fileUpload = document.getElementById('file-upload');
     var days = document.getElementById("Odays-consumption");
     var CookingOilConsumption = document.getElementById('oil-consumption');
 
     if (fileUpload.value && CookingOilConsumption.value && days.value) {
-      window.location.href = 'Category Selection.html?completed=oil';
+      window.location.href = 'Calculate Result Oil Consumption.html?completed=oil';
     } else {
       alert('Please fill in all the criteria before submitting.');
     }
   };
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+      $("#sidebar").load("sidebarUser.html"); 
+    });
 </script>
 
 </body>
