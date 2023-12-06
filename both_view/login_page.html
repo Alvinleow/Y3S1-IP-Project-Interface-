@@ -109,9 +109,14 @@
 
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    if(username !== '' && password !== '') {
-      window.location.href = '../both_view/home_page.html'; // Redirect to homepage
-    } else {
+    if(username == "admin" && password == "admin") {
+      window.location.href = '../both_view/home_page_admin.html'; // Redirect to homepage
+    } 
+
+    else if(username !== '' && password !== '') {
+      window.location.href = '../both_view/home_page_user.html'; // Redirect to homepage
+    } 
+    else {
       alert('Please enter value.'); // Alert the user
     }
   });
