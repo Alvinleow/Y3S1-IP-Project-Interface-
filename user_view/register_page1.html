@@ -42,7 +42,8 @@
   }
 
   .register-form input[type="text"],
-  .register-form input[type="number"] {
+  .register-form input[type="number"],
+  .register-form select {
     width: calc(100% - 20px);
     height: 30px;
     padding: 10px;
@@ -52,8 +53,14 @@
     font-size: 1em;
   }
 
+  .register-form select {
+    height: 51.6px;
+    width: 655.6px;
+  }
+
   .register-form input[type="text"]:focus,
-  .register-form input[type="number"]:focus {
+  .register-form input[type="number"]:focus,
+  .register-form select:focus {
     border: 1px solid #007AFF;
     outline: none;
   }
@@ -157,12 +164,29 @@
       </ul>
     </div>
     
-    <form class="register-form">
+    <form class="register-form" id="registerForm">
         <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
         <input type="text" id="address" name="address" placeholder="Residential Address" required>
         <input type="number" id="households" name="households" placeholder="Number of Households" required>
-        <input type="text" id="buildingtype" name="buildingtype" placeholder="Type of Building" required>
-        <button type="submit" onclick="location.href='register_page2.html';">Next</button>
+        <select id="buildingtype" name="buildingtype" required>
+          <option value="">Select Type of Building</option>
+          <option value="Bungalow">Bungalow</option>
+          <option value="Semi-Detached Houses">Semi-Detached Houses</option>
+          <option value="Detached Houses">Detached Houses</option>
+          <option value="Terrace House">Terrace House</option>
+          <option value="Link House">Link House</option>
+          <option value="Superlink House">Superlink House</option>
+          <option value="Townhouse">Townhouse</option>
+          <option value="Penthouse">Penthouse</option>
+          <option value="Condominium">Condominium</option>
+          <option value="Serviced Residence">Serviced Residence</option>
+          <option value="Studio Apartments">Studio Apartments</option>
+          <option value="Duplex Condos">Duplex Condos</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Flat">Flat</option>
+        </select>
+        
+        <button type="submit">Next</button>
         <div class="footer">
         Already have an account? <a href="../both_view/login_page.html">Log In</a>
         </div>
@@ -170,5 +194,22 @@
     </div>
     <div class="footer-bar"></div>
 </div>
+
+<script>
+  document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var fullname = document.getElementById('fullname').value;
+    var address = document.getElementById('address').value;
+    var households = document.getElementById('households').value;
+    var buildingtype = document.getElementById('buildingtype').value;
+    if(fullname !== '' && address !== '' && households !== '' && buildingtype !== '') {
+      window.location.href = 'register_page2.html'; // Redirect to homepage
+    } else {
+      alert('Please enter value.'); // Alert the user
+    }
+  });
+</script>
+
 </body>
 </html>

@@ -206,7 +206,7 @@
       </ul>
     </div>
     
-    <form class="register-form">
+    <form class="register-form" id="registerForm">
         <input type="email" id="email" name="email" placeholder="Email" required>
         <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" pattern="[0-9]{11}" maxlength="11" required>
         <div class="confirm-code">
@@ -221,7 +221,7 @@
                 </button>
             </div>
         </div>
-        <button type="submit" class="submit-button" onclick="location.href='register_page3.html';">Next</button>
+        <button type="submit" class="submit-button">Next</button>
         <div class="footer">
         Already have an account? <a href="../both_view/login_page.html">Log In</a>
         </div>
@@ -229,5 +229,21 @@
     </div>
     <div class="footer-bar"></div>
 </div>
+
+<script>
+  document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var email = document.getElementById('email').value;
+    var phoneNumber = document.getElementById('phoneNumber').value;
+    var confirmCode = document.getElementById('confirmCode').value;
+    if(email !== '' && phoneNumber !== '' && confirmCode !== '') {
+      window.location.href = 'register_page3.html'; // Redirect to homepage
+    } else {
+      alert('Please enter value.'); // Alert the user
+    }
+  });
+</script>
+
 </body>
 </html>
