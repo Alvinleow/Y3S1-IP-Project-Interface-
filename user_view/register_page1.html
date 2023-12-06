@@ -166,8 +166,9 @@
     
     <form class="register-form" id="registerForm">
         <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
-        <input type="text" id="address" name="address" placeholder="Residential Address" required>
+        <input type="text" id="address" name="address" placeholder="Residential Address" autocomplete="address-line1"required>
         <input type="number" id="households" name="households" placeholder="Number of Households" required>
+        <label for="buildingtype"></label>
         <select id="buildingtype" name="buildingtype" required>
           <option value="">Select Type of Building</option>
           <option value="Bungalow">Bungalow</option>
