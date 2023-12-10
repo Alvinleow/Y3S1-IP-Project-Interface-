@@ -27,13 +27,14 @@
     box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
     margin-left: 300px; /* Adjust based on your sidebar width */
   }
-  .report-title {
-    color: #333;
-    margin-bottom: 2em;
-  }
 
   .report-container img{
     margin-top: 40px;
+  }
+
+  .report-title {
+    color: #333;
+    margin-bottom: 2em;
   }
 
   .title-background {
@@ -149,13 +150,12 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(function(){
-      $("#sidebarAdmin").load("../admin_view/sidebarAdmin.html"); 
+      $("#sidebarUser").load("../user_view/sidebarUser.html"); 
     });
 </script>
 </head>
 <body>
-  <div id="sidebarAdmin"></div>
-
+<div id="sidebarUser"></div>
 <div class="main-content">
   <div class="report-container">
     <div class="top">
@@ -165,7 +165,7 @@
         <div class="icon-container">
             <img src="../images/user_icon.png" alt="user_icon" width="70" height="70" id="userIcon" class="dropdown-toggle">
             <div class="dropdown-menu" aria-labelledby="userIcon">
-                <a class="dropdown-item" href="../admin_view/admin_profile.html">
+                <a class="dropdown-item" href="../user_view/user_profile.html">
                     <i class="profile-icon"></i> Profile
                 </a>
                 <a class="dropdown-item" href="../both_view/logout_page.html">
@@ -175,10 +175,10 @@
         </div>
     </div>
     <h2 class="report-title">
-        <span class="title-background">Home Page</span>
+        <span class="title-background">Dashboard</span>
     </h2>
 
-    <img src="../images/home screenshot.png" alt="homePage">
+    <img src="../images/dashboard screenshot.png" alt="homePage">
 
   </div>
 </div>
@@ -192,7 +192,7 @@
     
       userIcon.addEventListener("click", function(event) {
         dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-        event.stopPropagation(); // Prevent the click from being detected by the window event
+        event.stopPropagation(); 
       });
     
       window.addEventListener("click", function() {
